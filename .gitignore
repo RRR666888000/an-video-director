@@ -1,0 +1,27 @@
+# Project data must live outside this distributable skill.
+.DS_Store
+__pycache__/
+*.py[cod]
+.env
+.env.*
+local.json
+*token*
+*credentials*
+private/
+local/
+raw/
+media/
+library/
+runs/
+outputs/
+*.mp4
+*.mov
+*.MOV
+*.mkv
+*.wav
+*.mp3
+*.srt
+*.ass
+*.zip
+lesson-index.json
+lesson-routes.json

@@ -1,0 +1,76 @@
+{
+  "version": "1.0",
+  "description": "多标签词表，不是 JSON Schema；候选作用与组片 actual_role 分开。自由字段应有原片依据。",
+  "fields": {
+    "product_identity": {"type": "array[string]", "description": "稳定商品ID；多款分别登记", "example": ["bag_a_v1"], "boundary": "未知用空列表并备注；款式、规格或版本不同不可冒用同一ID"},
+    "topic": {"type": "array[string]", "description": "具体话题，可多选", "example": ["快取钥匙", "收纳习惯"], "boundary": "只标本段涉及的话题，不把推测写成事实"},
+    "content_roles": {"type": "array[enum]", "description": "候选内容作用", "example": ["experience", "evidence"], "boundary": "不是播放位置；实际作用在组片时确定"},
+    "evidence_types": {"type": "array[enum]", "description": "本段依据类型", "example": ["observed_action"], "boundary": "类型不等于可信度；另记主张及支撑范围"},
+    "emotional_state": {"type": "array[enum]", "description": "可观察或明确表达的说话者状态", "example": ["humorous"], "boundary": "不诊断内心，不把预期观众情绪当事实"},
+    "semantic_complete": {"type": "enum", "description": "语义完整程度", "example": "complete", "boundary": "说完一句不一定交代完整前提"},
+    "context_dependency": {"type": "array[enum]", "description": "理解所需上下文", "example": ["neighboring_speech"], "boundary": "standalone 不与其他值并列；备注具体依赖"},
+    "timeliness": {"type": "enum", "description": "时效情况", "example": "time_bound", "boundary": "另记日期、期限与核实来源；录制新不代表活动仍有效"},
+    "use_status": {"type": "enum", "description": "相对于明确用途的使用状态", "example": "candidate", "boundary": "广告和自然内容可分别登记用途及状态，不永久判定素材好坏"},
+    "review_status": {"type": "enum", "description": "实际完成的复核阶段", "example": "proposed", "boundary": "记录复核方式与时间范围；不从抽样推全量"}
+  },
+  "content_roles": {
+    "hook": {"label": "候选吸引点", "example": "取钥匙的利落动作", "boundary": "可在中段使用，不固定开头"},
+    "audience": {"label": "人群或场景", "example": "赶车的通勤者", "boundary": "泛称所有人不算精准人群"},
+    "category": {"label": "品类认知", "example": "说明这是包内收纳袋", "boundary": "品类说明不证明某款优越"},
+    "feature": {"label": "具体特点", "example": "外侧两格", "boundary": "特点不自动等于使用收益"},
+    "experience": {"label": "使用体验", "example": "演示不翻主袋取钥匙", "boundary": "个人体验不推广为人人效果"},
+    "evidence": {"label": "支撑依据", "example": "连续装取支持操作描述", "boundary": "须指向具体主张，不扩大证明范围"},
+    "objection": {"label": "顾虑与回应", "example": "解释水杯能否放下", "boundary": "删掉尺寸条件会误导"},
+    "choice": {"label": "选择帮助", "example": "按快取或容量需求选", "boundary": "涉及多款时交代身份和条件"},
+    "persona": {"label": "人物表达", "example": "讲自己的收纳习惯", "boundary": "主播分享不伪装买家反馈"},
+    "cta": {"label": "下一步行动", "example": "进房看同款演示", "boundary": "承接对象和活动须有效"},
+    "broll": {"label": "补充画面", "example": "袋口与手部特写", "boundary": "装饰画面不冒充效果证据"},
+    "live_admin": {"label": "直播事务", "example": "回应订单或上链接", "boundary": "可有记录价值，不默认适合广告"}
+  },
+  "evidence_types": {
+    "visible_detail": {"label": "可见细节", "example": "能看清口袋数量", "boundary": "外观不证明耐用性"},
+    "observed_action": {"label": "可见连续动作", "example": "完整放入再取出", "boundary": "剪断关键过程须说明"},
+    "self_report": {"label": "本人陈述或感受", "example": "我这样放更顺手", "boundary": "不等于独立验证"},
+    "external_record": {"label": "外部记录", "example": "可核对的尺寸表", "boundary": "记录来源、版本及适用对象"},
+    "none": {"label": "没有支撑依据", "example": "只有形容词", "boundary": "不与已知证据类型并列"},
+    "unknown": {"label": "依据待判", "example": "抽帧看不清操作", "boundary": "不能当作证据已存在"}
+  },
+  "emotional_state": {
+    "neutral": {"label": "平稳", "example": "平静介绍结构", "boundary": "不等于无趣"},
+    "warm": {"label": "亲切", "example": "柔和回应提问", "boundary": "不推断私下性格"},
+    "excited": {"label": "兴奋", "example": "明确表达惊喜", "boundary": "音量大不必然兴奋"},
+    "hesitant": {"label": "犹疑", "example": "明确表示拿不准", "boundary": "停顿不自动标犹疑"},
+    "humorous": {"label": "轻松或笑意", "example": "自嘲后自然笑声", "boundary": "保留语境，不据此断定观众会笑"},
+    "unknown": {"label": "无法判断", "example": "只有产品静物", "boundary": "不强行补情绪标签"}
+  },
+  "semantic_complete": {
+    "complete": {"label": "意思完整", "example": "问题、条件和答案齐全", "boundary": "仍可依赖可见商品"},
+    "incomplete": {"label": "意思未完", "example": "只有因为没有结论", "boundary": "先补邻段，不冒充完整表达"},
+    "uncertain": {"label": "待核对", "example": "代词对象未辨明", "boundary": "复核前不当作完整"}
+  },
+  "context_dependency": {
+    "standalone": {"label": "可独立理解", "example": "对象和前提均交代", "boundary": "须结合原声与画面判断"},
+    "neighboring_speech": {"label": "依赖邻句", "example": "这句话回应前一问题", "boundary": "记录所需片段ID或时间"},
+    "offscreen_reference": {"label": "依赖画外对象", "example": "口播这里但未拍清", "boundary": "不猜商品身份"},
+    "live_state": {"label": "依赖当场状态", "example": "刚才观众问的价格", "boundary": "离开原场次须补说明或核实"}
+  },
+  "timeliness": {
+    "stable": {"label": "无明显时限", "example": "固定版本口袋结构", "boundary": "版本变化仍须重核"},
+    "time_bound": {"label": "有时限", "example": "已核实期限的活动", "boundary": "使用时再次对齐日期"},
+    "expired": {"label": "已过期", "example": "已结束优惠", "boundary": "可保留历史记录，不当当前承诺"},
+    "unknown": {"label": "时效未知", "example": "只说今天有券", "boundary": "核实前不能作为当前福利"}
+  },
+  "use_status": {
+    "candidate": {"label": "候选", "example": "初筛看似适合", "boundary": "不等于已可成片"},
+    "usable": {"label": "本用途可用", "example": "条件已核实且视听复核通过", "boundary": "需 av_checked；效果仍待测试"},
+    "needs_context": {"label": "待补语境", "example": "缺被回答的问题", "boundary": "补齐再判断可用性"},
+    "needs_verification": {"label": "待核事实", "example": "版本或活动日期不明", "boundary": "依赖该事实的计划暂缓"},
+    "backup": {"label": "备用", "example": "同义段中声画稍弱的一条", "boundary": "不删除，启用前复核"},
+    "not_for_current_goal": {"label": "不适合本目标", "example": "广告暂不使用的完整笑场", "boundary": "自然人物内容可另评"}
+  },
+  "review_status": {
+    "proposed": {"label": "初标", "example": "基于转写或抽帧的建议", "boundary": "不称看完原片"},
+    "transcript_checked": {"label": "文本已核", "example": "已检查转写中的语义", "boundary": "未证明画面或声音无误"},
+    "av_checked": {"label": "视听已核", "example": "看完并听完标定时间窗", "boundary": "只覆盖实际复核区间；不自动核实外部事实"}
+  }
+}

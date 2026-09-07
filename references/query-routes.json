@@ -1,0 +1,275 @@
+[
+  {
+    "id": "clip-library",
+    "label": "大量直播切片与增量素材库",
+    "queries": [
+      "一堆直播切片",
+      "直播切片",
+      "素材库",
+      "批量素材",
+      "分门别类",
+      "批量混剪",
+      "素材分类",
+      "拆解片段",
+      "片段作用",
+      "批量剪",
+      "增量入库"
+    ],
+    "terms": [
+      "片段",
+      "作用",
+      "证据",
+      "语义",
+      "上下文"
+    ],
+    "lessons": [],
+    "references": [
+      "references/live-clip-library.md",
+      "references/clip-library-format.md"
+    ]
+  },
+  {
+    "id": "account",
+    "label": "账号体系与转型",
+    "queries": [
+      "内容体系",
+      "内容很散",
+      "账号很散",
+      "成熟账号",
+      "重建账号",
+      "老账号",
+      "账号转型",
+      "账号定位",
+      "定位",
+      "栏目",
+      "内容线",
+      "工作室内容",
+      "工作室",
+      "个人IP",
+      "个人ip"
+    ],
+    "terms": [
+      "定位",
+      "内容线",
+      "迭代",
+      "转型",
+      "差异化"
+    ],
+    "lessons": [],
+    "references": [
+      "references/account-system.md"
+    ]
+  },
+  {
+    "id": "ideation",
+    "label": "从零选题与普通生活",
+    "queries": [
+      "不知道拍什么",
+      "不知道做什么",
+      "没有灵感",
+      "没灵感",
+      "没思路",
+      "找选题",
+      "选题",
+      "生活普通",
+      "原创",
+      "拍什么",
+      "想法",
+      "大纲",
+      "讲不清"
+    ],
+    "terms": [
+      "选题",
+      "需求",
+      "解决方案",
+      "大纲",
+      "材料组织"
+    ],
+    "lessons": [],
+    "references": [
+      "references/ideation.md",
+      "references/content-core.md"
+    ]
+  },
+  {
+    "id": "voice",
+    "label": "本人表达与口播",
+    "queries": [
+      "不像我",
+      "像AI",
+      "ai味",
+      "AI味",
+      "文案很假",
+      "口播",
+      "表达",
+      "金句",
+      "说话"
+    ],
+    "terms": [
+      "个性化表达",
+      "字词句",
+      "语言",
+      "交流处境"
+    ],
+    "lessons": [],
+    "references": [
+      "references/ideation.md",
+      "references/story-persona.md"
+    ]
+  },
+  {
+    "id": "story",
+    "label": "人物故事与日常",
+    "queries": [
+      "日常",
+      "vlog",
+      "生活记录",
+      "生活分享",
+      "人设",
+      "人物",
+      "故事",
+      "不卖货",
+      "个人表达"
+    ],
+    "terms": [
+      "日常分享",
+      "故事",
+      "人设",
+      "人物"
+    ],
+    "lessons": [],
+    "references": [
+      "references/story-persona.md",
+      "references/ideation.md"
+    ]
+  },
+  {
+    "id": "commerce",
+    "label": "商业视频与直播引流",
+    "queries": [
+      "千川",
+      "投流",
+      "进直播间",
+      "进房",
+      "卖货",
+      "带货",
+      "种草",
+      "成交",
+      "本地获客"
+    ],
+    "terms": [
+      "投流",
+      "付费链路",
+      "带货",
+      "成交",
+      "引流获客"
+    ],
+    "lessons": [],
+    "references": [
+      "references/commerce.md"
+    ]
+  },
+  {
+    "id": "structure",
+    "label": "结构与持续观看",
+    "queries": [
+      "钩子",
+      "骨架",
+      "股价",
+      "刺点",
+      "次点",
+      "留不住",
+      "看不下去",
+      "开头",
+      "结构"
+    ],
+    "terms": [
+      "骨架",
+      "股价",
+      "钩子",
+      "情绪刺点",
+      "情绪次点"
+    ],
+    "lessons": [],
+    "references": [
+      "references/content-core.md"
+    ]
+  },
+  {
+    "id": "density",
+    "label": "信息密度与理解",
+    "queries": [
+      "信息密度",
+      "信息效率",
+      "太啰嗦",
+      "太复杂",
+      "听不懂",
+      "理解负荷"
+    ],
+    "terms": [
+      "信息密度",
+      "信息效率",
+      "理解负荷"
+    ],
+    "lessons": [],
+    "references": [
+      "references/content-core.md"
+    ]
+  },
+  {
+    "id": "editing",
+    "label": "素材拆解与视听剪辑",
+    "queries": [
+      "剪辑",
+      "怎么剪",
+      "录屏",
+      "素材分类",
+      "拆素材",
+      "切片",
+      "配乐",
+      "字体",
+      "镜头",
+      "拍摄",
+      "节奏"
+    ],
+    "terms": [
+      "剪辑",
+      "视角",
+      "节奏",
+      "镜头",
+      "影像"
+    ],
+    "lessons": [],
+    "references": [
+      "references/content-core.md",
+      "references/visual-editing.md",
+      "references/production.md"
+    ]
+  },
+  {
+    "id": "review",
+    "label": "自然内容与商业复盘",
+    "queries": [
+      "复盘",
+      "数据",
+      "没流量",
+      "掉量",
+      "表现下降",
+      "没人关注",
+      "不涨粉",
+      "转化率",
+      "测试结果"
+    ],
+    "terms": [
+      "复盘",
+      "运营规划",
+      "漏斗",
+      "迭代"
+    ],
+    "lessons": [],
+    "references": [
+      "references/testing.md",
+      "references/account-system.md"
+    ]
+  }
+]

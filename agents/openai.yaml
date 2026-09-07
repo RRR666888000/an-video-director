@@ -1,0 +1,4 @@
+interface:
+  display_name: "内容编导：账号与视频创作"
+  short_description: "从账号体系、工作室和个人IP，到选题、脚本、素材剪辑与内容复盘"
+  default_prompt: "使用 $an-video-director，结合我的情况，帮我解决当前的内容创作问题；没有方向时先帮我找一个能执行的起点。"
